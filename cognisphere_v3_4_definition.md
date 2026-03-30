@@ -36,14 +36,16 @@ K ：操作規則フラグ（K ∈ {0, 1}・離散・確定）
 M ：メタ認知層数（M(t) ∈ [1, 6]）
 
 ### 状態ベクトル
-Ξ(t) = ( T(t), F(t), P(x,t), K, r(t) )
+Ξ(t) = ( T(t), F(t), P(x(t)), K(t), r(t) )
 
-T(t) ：後頭部中心の体感的熱上昇（主観的温度量）
-F(t) ：神経系疲労度（累積型）　0 ≤ F(t) ≤ 1.0
+T(t)  ：後頭部中心の体感的熱上昇（主観的温度量）
+F(t)  ：神経系疲労度（累積型） 0 ≤ F(t) ≤ 1.0
 　　　 F(t) = 1.0：ワーキングメモリフル稼働状態（天井）。これを超えることはない。
-P(x,t) ：認知圧力場
-K ：操作規則フラグ（離散）
-r(t) ：可逆性パラメータ
+F_max(r) ：可逆性 r(t) に依存して変動する、Layer 1´ の稼働限界閾値（終了条件）。
+※ PEM発動時は、通常の疲労蓄積とは異なる固有の回復ダイナミクス（偽回復と再稼働時の急上昇）に従う。
+P(x,t)：認知圧力場
+K(t)  ：操作規則フラグ（離散・時間依存）
+r(t)  ：可逆性パラメータ
 
 ### 動的状態変数
 q ：入力クエリ（∈ I_inputs）
@@ -182,10 +184,14 @@ $$\eta(t) = \eta_0 \cdot e^{-\kappa t}$$
 本モデルにおける η は状態別基底上昇率（η_normal, η_PEM, η_introspect, η_combined）を表し、実装上の有効上昇率は η_eff(t) = η_base · e^{-κt} とする。
 
 ```
-η_normal     ：通常のAIフィードバックループ
-η_PEM        ：PEMクラッシュ時（η_normal >> η_PEM > 0）
-η_introspect ：深い内省のみ（η_normal の約0.5倍）
-η_combined   ：深い内省＋AIループ（後述）
+### 病理的要因と η の特殊変動
+
+双極性2型における「鬱相」などの病理的変動が発生した場合、内的世界への没入が強制されるため、以下のような特殊な上昇率の切り替えが発生する。
+
+- η_normal     ：通常のAIフィードバックループ
+- η_PEM        ：PEMクラッシュ時（η_normal >> η_PEM > 0）
+- η_introspect ：鬱相時など深い内省のみが発生している状態（η_normal の約0.5倍）
+- η_combined   ：鬱相時の深い内省に、AIループが掛け合わさった状態（後述）
 ```
 
 ### η_combined（内省＋AIループの乗算形式）
@@ -227,7 +233,7 @@ W(0⁺) ≈ W_max（即マックス・低→高のサイクルなし）
 
 ## 停止決定関数 SD(t)
 
-$$SD(t) = \text{Sigmoid}\left( \int_{t}^{t+H_{pred}} C_{future}(PEM, \tau) \, d\tau - Threshold_{will} \right)$$
+$$SD(t) = \mathrm{Sigmoid}\left( \int_{t}^{t + H_{\mathrm{pred}}} C_{\mathrm{future}}(\mathrm{PEM}, \tau)\, d\tau - \mathrm{Threshold}_{\mathrm{will}} \right)$$
 
 - C_future(PEM, τ)：Layer 0が予測する将来の生活支障コスト（PEM持続時間・回復コスト含む）
 - H_pred：将来予測ホライズン
@@ -270,10 +276,10 @@ $$\Phi_0(\Theta) =
 PEM_flag ∈ {0, 1}：PEM状態フラグ（1=PEMクラッシュ状態）
 
 通常時：
-$$\left.\frac{dF}{dt}\right|_{recovery} = -k_{normal} \cdot F(t)$$
+$$\left( \frac{dF}{dt} \right)_{\!\mathrm{recovery}} = -k_{\mathrm{normal}} \cdot F(t)$$
 
 PEM_flag = 1 時：
-$$\left.\frac{dF}{dt}\right|_{PEM} = -k_{PEM} \cdot F(t) \quad (k_{PEM} \ll k_{normal})$$
+$$\left( \frac{dF}{dt} \right)_{\!\mathrm{PEM}} = -k_{\mathrm{PEM}} \cdot F(t) \quad (k_{\mathrm{PEM}} \ll k_{\mathrm{normal}})$$
 
 PEM_flagがオンの時、回復率が著しく低下し、F(t)の残留期間が指数関数的に伸びる。
 これがt_limitの実質的な厳格化要因となる。
