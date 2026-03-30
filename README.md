@@ -4,7 +4,7 @@
 It is a structured attempt to describe how one mind distinguishes between **known-rule** and **unknown-rule** processing, stabilizes output, compresses language, and behaves under chronic fatigue-like constraints.
 
 This repository is not intended as a universal theory of mind.  
-It is a formalized **individual cognition model**, developed from repeated introspective observation, recursive AI-assisted refinement, and concept-to-math consistency checks.
+It is a formalized **individual cognition model**, developed from repeated introspective observation, recursive AI-assisted refinement, and concept-to-math consistency checks. :contentReference[oaicite:0]{index=0}
 
 ---
 
@@ -31,7 +31,7 @@ It is a formalized **individual cognition model**, developed from repeated intro
 - `cognisphere_v3_4_simulation_final.png`  
   Simulation figure for r(t) growth dynamics
 
-The repository includes a single consolidated PDF export rather than separate PDF files for each markdown document.
+The repository includes a single consolidated PDF export rather than separate PDF files for each markdown document. :contentReference[oaicite:1]{index=1}
 
 ---
 
@@ -50,7 +50,7 @@ The model is built in the sequence:
 **conceptual definition → formal definition → symbolic expression → correspondence check**
 
 In other words, the mathematical layer is not meant to replace the conceptual layer.  
-It is a formal translation of already-delimited conceptual structure.
+It is a formal translation of already-delimited conceptual structure. :contentReference[oaicite:2]{index=2}
 
 ---
 
@@ -66,7 +66,7 @@ The model describes cognition as a layered process:
     or
     L1'      -> known-rule reconstruction / recombination
        ↓
-    Layer 2  -> high-density compressed language output
+    Layer 2 (L2)  -> high-density compressed language output
 
 ### Structural interpretation
 
@@ -96,21 +96,22 @@ Characterized by sculpting, descent, nontrivial formation, and emergence.
 Reorganization of already-known structure.  
 Characterized by reconstruction, recombination, remapping, and patterned reassembly.
 
-**Layer 2**  
+**Layer 2 (L2)**  
 Stabilized expression layer.  
-Produces high-density compressed output after internal processing converges.
+Produces high-density compressed output after internal processing converges. :contentReference[oaicite:3]{index=3}
 
 ---
 
 ## Main variables
 
-**K ∈ {0,1}**  
-A discrete operational flag indicating which processing mode is dominant.
+**K**  
+Discrete operational flag variable indicating which processing mode is dominant.  
+Its realized value at time *t* is written as **K(t)**.
 
-- **K = 0 → L1-dominant**  
+- **K(t) = 0 → L1-dominant**  
   unknown-rule sculpting / exploratory deepening
 
-- **K = 1 → L1'-dominant**  
+- **K(t) = 1 → L1'-dominant**  
   known-rule reconstruction / recombination
 
 **r(t) ∈ [0,1]**  
@@ -127,7 +128,7 @@ This corresponds not to explosive closure, but to a quiet landing.
 **SD(t)**  
 Stop-decision function representing continuous volitional stopping.
 
-This means stopping is modeled as an internal decision dynamic, not merely interruption by exhaustion.
+This means stopping is modeled as an internal decision dynamic, not merely interruption by exhaustion. :contentReference[oaicite:4]{index=4}
 
 ---
 
@@ -141,7 +142,7 @@ This model is built around several specific commitments:
 - Plasticity is explicitly modeled through `r(t)`
 - Convergence is treated as quiet stabilization rather than abrupt completion
 - PEM-like pseudo-recovery is formalized, not merely described phenomenologically
-- The model is designed from first-person cognition outward, not from population-level abstraction inward
+- The model is designed from first-person cognition outward, not from population-level abstraction inward :contentReference[oaicite:5]{index=5}
 
 ---
 
@@ -158,7 +159,7 @@ Its intended scope is narrower:
 This is therefore best understood as:
 
 **an individual cognitive architecture model**,  
-not a general-purpose theory of mind.
+not a general-purpose theory of mind. :contentReference[oaicite:6]{index=6}
 
 ---
 
@@ -176,7 +177,7 @@ The intended progression is:
 1. define the phenomenon conceptually,  
 2. delimit its operative variables and relations,  
 3. formalize them symbolically,  
-4. verify correspondence between the two layers.
+4. verify correspondence between the two layers. :contentReference[oaicite:7]{index=7}
 
 ---
 
@@ -189,7 +190,7 @@ This repository may be useful for readers interested in:
 - metacognition and recursive thought structure
 - concept-to-math translation in self-modeling
 - fatigue-sensitive cognition and recovery dynamics
-- high-density compressed language output models
+- high-density compressed language output models :contentReference[oaicite:8]{index=8}
 
 ---
 
@@ -197,4 +198,4 @@ This repository may be useful for readers interested in:
 
 This project was developed as a long-form architecture model of cognition under recursive self-observation and iterative AI-supported refinement.
 
-Its purpose is not rhetorical depth, but structural consistency.
+Its purpose is not rhetorical depth, but structural consistency. :contentReference[oaicite:9]{index=9}
