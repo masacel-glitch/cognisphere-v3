@@ -28,7 +28,7 @@ It is a formalized **individual cognition model**, developed from repeated intro
 - `cognisphere_v3_4.pdf`  
   Consolidated PDF export
 
-- `r_growth_simulation.png`  
+- `cognisphere_v3_4_simulation_final.png`  
   Simulation figure for r(t) growth dynamics
 
 The repository includes a single consolidated PDF export rather than separate PDF files for each markdown document.
