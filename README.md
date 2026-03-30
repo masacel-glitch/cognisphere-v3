@@ -1,61 +1,54 @@
-# Cognisphere v3.4
-## Personal Cognitive Architecture Model
+# Cognisphere v3
 
-Built from internal observation → formally specified
+**Cognisphere** is a first-person cognitive architecture model.  
+It is a structured attempt to describe how one mind distinguishes between **known-rule** and **unknown-rule** processing, stabilizes output, compresses language, and behaves under chronic fatigue-like constraints.
 
-![Cognisphere simulation](./cognisphere_v3_4_simulation_final.png)
-
----
-
-## Overview
-
-**Cognisphere v3.4** is a formal model of a **single individual's cognitive processing architecture**.
-
-It is **not** proposed as a universal theory of mind.  
-It is a **personal cognitive architecture**: a structured attempt to describe how one mind processes known vs. unknown content, stabilizes output, compresses language, and behaves under chronic fatigue-like constraints.
-
-This repository includes:
-
-- a lightweight overview
-- a conceptual definition
-- a mathematical definition
-- a concept ↔ math cross-reference
-- a PDF version
-- simulation output
+This repository is not intended as a universal theory of mind.  
+It is a formalized **individual cognition model**, developed from repeated introspective observation, recursive AI-assisted refinement, and concept-to-math consistency checks.
 
 ---
 
-## What is this?
+## Repository contents
 
-This project began from direct internal observation and long-term introspective analysis, especially around recurring patterns such as:
+- `cognisphere_v3_4_lite.md`  
+  Shortened overview version
 
-- high-density cognitive compression
-- known/unknown processing bifurcation
-- quiet convergence after deep cognition
-- PEM-like pseudo-recovery dynamics
-- structural flexibility growth through introspection + AI-assisted refinement
+- `cognisphere_v3_4_concept.md`  
+  Conceptual definition version
 
-The goal is **not** to claim general truth.  
-The goal is to make a personal cognitive structure **legible, inspectable, and discussable** in a formal way.
+- `cognisphere_v3_4_definition.md`  
+  Mathematical / formal definition version
 
-You can think of Cognisphere as a:
+- `cognisphere_v3_4_crossref.md`  
+  Concept ↔ mathematical correspondence table
 
-- personal cognitive OS model
-- formalized introspection architecture
-- phenomenology → structure translation
-- human–AI co-modeling artifact
+- `cognisphere_v3_4_concept.pdf`  
+  PDF export of conceptual definition
+
+- `cognisphere_v3_4_definition.pdf`  
+  PDF export of mathematical definition
+
+- `cognisphere_v3_4_crossref.pdf`  
+  PDF export of correspondence table
 
 ---
 
-## Start here
+## Recommended reading order
 
-If you are new to this project, read in this order:
+If you are reading this model for the first time, the recommended order is:
 
-1. [`cognisphere_v3_4_lite.md`](./cognisphere_v3_4_lite.md) — shortest and easiest overview  
-2. [`cognisphere_v3_4_concept.md`](./cognisphere_v3_4_concept.md) — conceptual definition  
-3. [`cognisphere_v3_4_definition.md`](./cognisphere_v3_4_definition.md) — formal mathematical specification  
-4. [`cognisphere_v3_4_crossref.md`](./cognisphere_v3_4_crossref.md) — concept ↔ math correspondence  
-5. [`cognisphere_v3_4.pdf`](./cognisphere_v3_4.pdf) — compact compiled version  
+1. `cognisphere_v3_4_lite.md`  
+2. `cognisphere_v3_4_concept.md`  
+3. `cognisphere_v3_4_definition.md`  
+4. `cognisphere_v3_4_crossref.md`
+
+This order matters.  
+The model is built in the sequence:
+
+**conceptual definition → formal definition → symbolic expression → correspondence check**
+
+In other words, the mathematical layer is not meant to replace the conceptual layer.  
+It is a formal translation of already-delimited conceptual structure.
 
 ---
 
@@ -63,319 +56,143 @@ If you are new to this project, read in this order:
 
 The model describes cognition as a layered process:
 
-```text
-Layer 0  -> always-on metacognitive observation
-   ↓
-K-flag   -> retrospective judgment of dominant operation mode
-   ↓
-L1       -> unknown-content sculpting / exploratory deepening
-or
-L1'      -> known-content reconstruction / recombination
-   ↓
-Layer 2  -> high-density compressed language output
+    Layer 0  -> always-on metacognitive observation
+       ↓
+    K-flag   -> judgment of whether the operative rule for the main problem is known or unknown
+       ↓
+    L1       -> unknown-rule sculpting / exploratory deepening
+    or
+    L1'      -> known-rule reconstruction / recombination
+       ↓
+    Layer 2  -> high-density compressed language output
 
-Structural interpretation
+### Structural interpretation
 
-Layer 0
-Basal steady-state metacognitive observation.
+**Layer 0**  
+Basal steady-state metacognitive observation.  
 Not identical to active reasoning, but continuously present as an observing substrate.
 
-K-flag
-A post hoc judgment of whether the main operation was dominated by:
+**K-flag**  
+A discrete flag indicating whether the operative rule for the main problem is known or unknown.
 
-unknown-content sculpting (K = 1)
+- **K = 0**: the operative rule is unknown  
+  → exploratory sculpting / generative deepening is required  
+  → **L1-dominant**
 
-known-content reconstruction (K = 0)
+- **K = 1**: the operative rule is known  
+  → reconstruction / application / remapping is possible  
+  → **L1'-dominant**
 
+This does **not** mean the object itself is globally known or unknown.  
+It means whether the cognitive operation needed for the main problem is already available or not.
 
-L1
-Deep engagement with partially unknown structure.
+**L1**  
+Deep engagement with partially unknown structure.  
 Characterized by sculpting, descent, nontrivial formation, and emergence.
 
-L1'
-Reorganization of already-known structure.
-Characterized by reconstruction, recombination, and patterned reassembly.
+**L1'**  
+Reorganization of already-known structure.  
+Characterized by reconstruction, recombination, remapping, and patterned reassembly.
 
-Layer 2
-Stabilized expression layer.
+**Layer 2**  
+Stabilized expression layer.  
 Produces high-density compressed output after internal processing converges.
-
-
 
 ---
 
-Main variables
+## Main variables
 
-K ∈ {0,1}
+**K ∈ {0,1}**  
+A discrete operational flag indicating which processing mode is dominant.
 
-A discrete operational flag indicating which processing mode was dominant.
+- **K = 0 → L1-dominant**  
+  unknown-rule sculpting / exploratory deepening
 
-K = 1 → L1-dominant (unknown-content sculpting)
+- **K = 1 → L1'-dominant**  
+  known-rule reconstruction / recombination
 
-K = 0 → L1'-dominant (known-content reconstruction)
-
-
-r(t) ∈ [0,1]
-
+**r(t) ∈ [0,1]**  
 Plasticity parameter representing structural flexibility of the cognitive architecture over time.
 
-This does not mean emotional intensity.
+This does not mean emotional intensity.  
 It refers to cognitive deformation tolerance, structural adaptability, and dynamic softness.
 
-Φ(Θ,t,r) ≈ 0
-
+**Φ(Θ,t,r) ≈ 0**  
 Convergence condition representing stable internal resolution.
 
 This corresponds not to explosive closure, but to a quiet landing.
 
-SD(t)
-
+**SD(t)**  
 Stop-decision function representing continuous volitional stopping.
 
 This means stopping is modeled as an internal decision dynamic, not merely interruption by exhaustion.
 
-
 ---
 
-What is distinctive here
+## What is distinctive here
 
 This model is built around several specific commitments:
 
-Known and unknown processing are operationally distinguished
-
-L1 and L1' are exclusive in dominance, but transitions between them are allowed
-
-Compressed output is treated as a structural property
-
-Plasticity is explicitly modeled through r(t)
-
-Convergence is treated as quiet stabilization rather than abrupt completion
-
-PEM-like pseudo-recovery is formalized, not merely described phenomenologically
-
-The model is designed from first-person cognition outward, not from population-level abstraction inward
-
-
+- Known-rule and unknown-rule processing are operationally distinguished
+- L1 and L1' are exclusive in dominance, but transitions between them are allowed
+- Compressed output is treated as a structural property
+- Plasticity is explicitly modeled through `r(t)`
+- Convergence is treated as quiet stabilization rather than abrupt completion
+- PEM-like pseudo-recovery is formalized, not merely described phenomenologically
+- The model is designed from first-person cognition outward, not from population-level abstraction inward
 
 ---
 
-Repository contents
+## Scope and limitations
 
-cognisphere_v3_4_lite.md
+This repository does **not** claim that all human cognition follows this architecture.
 
-Simplified, human-readable introduction.
+Its intended scope is narrower:
 
-cognisphere_v3_4_concept.md
+- to formalize one repeatedly observed cognition style,
+- to preserve consistency between conceptual and mathematical layers,
+- and to provide a reproducible structure for future refinement, simulation, and correspondence analysis.
 
-Conceptual / phenomenological definition of the architecture.
+This is therefore best understood as:
 
-cognisphere_v3_4_definition.md
-
-Formal mathematical definition.
-
-cognisphere_v3_4_crossref.md
-
-Mapping between conceptual and mathematical layers.
-
-cognisphere_v3_4.pdf
-
-Compiled specification for compact reading or sharing.
-
-cognisphere_v3_4_simulation_final.png
-
-Simulation figure.
-
+**an individual cognitive architecture model**,  
+not a general-purpose theory of mind.
 
 ---
 
-Selected findings
+## Why both concept and math are included
 
-1. Plasticity growth
+The conceptual and mathematical files are separated deliberately.
 
-The model includes a saturating growth view of r(t) over time.
+A conceptual model without formalization can remain vague.  
+A formal model without prior conceptual delimitation becomes symbolic decoration.
 
-Current framing:
+This repository therefore treats formalization as a **translation step**, not as an aesthetic layer.
 
-introspection + AI loop yields the strongest growth
+The intended progression is:
 
-AI-only support still improves growth
-
-severe crash states suppress growth but do not reduce it to zero
-
-recovery is nonlinear rather than monotonic
-
-
-2. Quiet convergence
-
-Deep cognition in this model does not necessarily end in dramatic closure.
-
-Instead, resolution often appears as:
-
-gradual stabilization
-
-density-preserving landing
-
-lossless compression into language
-
-calm settling after internal restructuring
-
-
-3. PEM pseudo-recovery
-
-One of the central observations formalized here is a pseudo-recovery pattern:
-
-apparent recovery may occur under reduced load
-
-reactivation can produce rapid fatigue rebound
-
-subjective recovery and structural recovery are not identical
-
-apparent improvement does not imply full restoration
-
-recovery dynamics must be modeled separately from momentary relief
-
-
+1. define the phenomenon conceptually,  
+2. delimit its operative variables and relations,  
+3. formalize them symbolically,  
+4. verify correspondence between the two layers.
 
 ---
 
-Operating constraints
+## Suggested use
 
-This model includes real-world constraint conditions affecting cognitive operation.
+This repository may be useful for readers interested in:
 
-These are not the model itself, but conditions under which the modeled cognition operates.
-
-Examples may include:
-
-PEM-like fatigue dynamics
-
-chronic sleep disruption
-
-stress-linked fluctuation
-
-long-horizon recovery asymmetry
-
-constraint-sensitive cognitive throughput
-
-
-These conditions matter because they alter:
-
-accessible depth
-
-stabilization speed
-
-stop-decision dynamics
-
-apparent recovery curves
-
-effective cognitive output bandwidth
-
-
+- introspection-based cognitive modeling
+- first-person architecture formalization
+- metacognition and recursive thought structure
+- concept-to-math translation in self-modeling
+- fatigue-sensitive cognition and recovery dynamics
+- high-density compressed language output models
 
 ---
 
-Scope and limitations
+## Author note
 
-This repository describes a single-person cognitive architecture.
+This project was developed as a long-form architecture model of cognition under recursive self-observation and iterative AI-supported refinement.
 
-It should not be read as:
-
-a clinical diagnostic system
-
-a treatment model
-
-a general theory of cognition
-
-a population-level scientific claim
-
-
-It is better understood as a formalized model located between:
-
-phenomenology
-
-cognitive architecture
-
-metacognition
-
-personal science
-
-human–AI collaborative modeling
-
-
-
----
-
-Who this may be useful for
-
-This repository may be relevant to people interested in:
-
-cognitive architecture
-
-metacognition
-
-introspection formalization
-
-phenomenological structure mapping
-
-personal science
-
-human–AI co-modeling
-
-compression-oriented cognition
-
-formal representation of subjective structure
-
-
-
----
-
-Version
-
-Current version: v3.4
-
-Key characteristics of v3.4 include:
-
-K-flag defined as operational judgment rather than naive mode labeling
-
-clearer exclusivity + transition relation between L1 and L1'
-
-stronger alignment between conceptual and mathematical definitions
-
-integrated treatment of convergence, plasticity, and recovery dynamics
-
-more stable mapping between phenomenology and formal structure
-
-
-
----
-
-Suggested citation / reference style
-
-If referencing this work, please cite it as a personal cognitive architecture model / formal introspection model rather than a general cognitive theory.
-
-Suggested wording:
-
-> Cognisphere v3.4: a formal personal cognitive architecture model based on introspection and iterative human–AI refinement.
-
-
-
-
----
-
-License / usage
-
-Academic reference with attribution is welcome.
-
-For commercial use, derivative reuse beyond standard citation, or formal redistribution, please ask permission first.
-
-
----
-
-Closing note
-
-Cognisphere v3.4 is an attempt to formalize cognition from the inside out.
-
-Not as universality.
-Not as diagnosis.
-But as structure.
-
-A mind made inspectable.
+Its purpose is not rhetorical depth, but structural consistency.
