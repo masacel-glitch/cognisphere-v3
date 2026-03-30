@@ -22,15 +22,6 @@ It is a formalized **individual cognition model**, developed from repeated intro
 - `cognisphere_v3_4_crossref.md`  
   Concept ↔ mathematical correspondence table
 
-- `cognisphere_v3_4_concept.pdf`  
-  PDF export of conceptual definition
-
-- `cognisphere_v3_4_definition.pdf`  
-  PDF export of mathematical definition
-
-- `cognisphere_v3_4_crossref.pdf`  
-  PDF export of correspondence table
-
 ---
 
 ## Recommended reading order
